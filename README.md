@@ -1,24 +1,41 @@
 # Response Menu
 
-![Pixel-art diner with animated monitor charts and pixel steam](docs/assets/Response-Menu-Banner.gif)
+<p align="center"><img src="docs/assets/Response-Menu-Banner.gif" alt="Pixel diner counter with breakfast dishes, monitor charts and animated coffee steam"></p>
 
-[View the still banner](docs/assets/Response-Menu-Banner.png)
+<p align="center"><a href="docs/assets/Response-Menu-Banner.png">Still banner</a></p>
 
-A menu of independent incident-response and security-posture tools. Choose the tool for your task; each has its own installation, permissions, evidence format and reporting.
+## The counter menu
 
-**Response Menu contains documentation only.** It is not a launcher or shared installer, and installing one tool does not require the others.
+**What brought you in?** Pick a category, then open the tool that fits. All five tools work independently; Response Menu is their documentation menu. There is no shared installer or suite-wide permission grant.
 
-## Pick a tool
+<details open>
+<summary><strong>Investigate · 3 tools</strong> — work an incident or handle evidence</summary>
 
-[![BEC: bacon, egg and cheese sandwich](docs/assets/BEC.png)](https://github.com/PendingUpdates/BEC) [![CrumbTrail: toast](docs/assets/CrumbTrail.png)](https://github.com/PendingUpdates/CrumbTrail) [![HashBrown: hash brown](docs/assets/HashBrown.png)](https://github.com/PendingUpdates/HashBrown) [![Flapjacks: pancakes](docs/assets/Flapjacks.png)](https://github.com/PendingUpdates/Flapjacks) [![Pallette Clenser: fruit bowl](docs/assets/Pallette-Clenser-Tile.png)](https://github.com/PendingUpdates/Pallette-Clenser)
+<a href="https://github.com/PendingUpdates/BEC"><img src="docs/assets/BEC.png" alt="Bacon, egg and cheese sandwich; open BEC" width="108" height="94"></a> <a href="https://github.com/PendingUpdates/CrumbTrail"><img src="docs/assets/CrumbTrail.png" alt="Toast; open CrumbTrail" width="108" height="94"></a> <a href="https://github.com/PendingUpdates/HashBrown"><img src="docs/assets/HashBrown.png" alt="Golden rectangular hash brown; open HashBrown" width="108"></a>
 
-| Tool | What it is for |
-| --- | --- |
-| [BEC](https://github.com/PendingUpdates/BEC) | Investigate email and account compromise using live Microsoft 365 or Google Workspace data, or analyze saved evidence offline. |
-| [Flapjacks](https://github.com/PendingUpdates/Flapjacks) | Review the security posture of a live Microsoft 365 tenant, or explore the audit with the synthetic demo. Reports identify coverage gaps. |
-| [CrumbTrail](https://github.com/PendingUpdates/CrumbTrail) | Build timelines from supplied Windows event logs and exports, or practice triage with the synthetic lab. |
-| [HashBrown](https://github.com/PendingUpdates/HashBrown) | Import existing disk or memory images and track their hashes and custody. A separate prototype registers supplied files. Native disk and RAM capture through Velociraptor still needs platform qualification. |
-| [Pallette Clenser](https://github.com/PendingUpdates/Pallette-Clenser) | Audit and plan potentially unwanted app cleanup. The current launcher accepts only supplied test inventories and cannot scan a host or remove apps. |
+- **[BEC](https://github.com/PendingUpdates/BEC)** — Investigate email and account compromise using live Microsoft 365 or Google Workspace data, or analyze saved evidence offline.
+- **[CrumbTrail](https://github.com/PendingUpdates/CrumbTrail)** — Build timelines from supplied Windows event logs and exports, or practice triage with the synthetic lab.
+- **[HashBrown](https://github.com/PendingUpdates/HashBrown)** — Import existing disk or memory images and track their hashes and custody. A separate prototype registers supplied files. Native disk and RAM capture through Velociraptor still needs platform qualification.
+
+</details>
+
+---
+
+<details open>
+<summary><strong>Audit &amp; plan · 2 tools</strong> — review posture or plan cleanup</summary>
+
+<a href="https://github.com/PendingUpdates/Flapjacks"><img src="docs/assets/Flapjacks.png" alt="Pancakes; open Flapjacks" width="108" height="94"></a> <a href="https://github.com/PendingUpdates/Pallette-Clenser"><img src="docs/assets/Pallette-Clenser.png" alt="Fruit bowl; open Pallette Clenser" width="108"></a>
+
+- **[Flapjacks](https://github.com/PendingUpdates/Flapjacks)** — Review the security posture of a live Microsoft 365 tenant, or explore the audit with the synthetic demo. Reports identify coverage gaps.
+- **[Pallette Clenser](https://github.com/PendingUpdates/Pallette-Clenser)** — Audit and plan potentially unwanted app cleanup. The current launcher accepts only supplied test inventories and cannot scan a host or remove apps.
+
+</details>
+
+## Before you order
+
+Open the chosen tool’s README for setup and mode-specific permissions. Each tool installs independently; BEC and Flapjacks do not require each other.
+
+[Workflows](docs/tool-workflows.md) · [Getting started](#getting-started) · [Setup](docs/setup.md) · [Permissions](#permissions-at-a-glance) · [Development](#documentation-and-contributors)
 
 ## Getting started
 
@@ -33,13 +50,40 @@ See [setup and prerequisites](docs/setup.md) for working with Response Menu itse
 
 Reading Response Menu requires no Microsoft 365, Google Workspace, Active Directory or endpoint administrator access. There is no shared service account or suite-wide permission grant.
 
-| Tool | Microsoft 365 | Google Workspace | On-premises Active Directory | Local or host access |
-| --- | --- | --- | --- | --- |
-| [Flapjacks](https://github.com/PendingUpdates/Flapjacks) | Approved delegated Graph reads and, for applicable checks, matching Exchange/Purview sessions. Identity-only sign-in does not unlock the audit scopes. | Not used. | Not used; Microsoft Entra is separate. | PowerShell and access to the checkout; write only if saving local results. [Authentication and setup](https://github.com/PendingUpdates/Flapjacks/blob/main/terminal/docs/AUTHENTICATION.md) |
-| [BEC](https://github.com/PendingUpdates/BEC) | Admin-consented Graph **application** permissions for the chosen live collectors, with separate trace provisioning where applicable. | Delegated service account and an authorized reports admin for Admin SDK audit reports; no Gmail mailbox access scope. | No native collector; no AD privileges required. | Read supplied exports and write the local case; no provider credentials for offline work. [Microsoft setup](https://github.com/PendingUpdates/BEC/blob/main/docs/security.md) · [Workspace setup](https://github.com/PendingUpdates/BEC/blob/main/docs/workspace.md) |
-| [CrumbTrail](https://github.com/PendingUpdates/CrumbTrail) | No cloud permissions. | Not used. | No directory bind or cloud API permissions. | Access to the input Windows artifacts and local output. Collecting protected source artifacts separately may require channel- or host-specific access. |
-| [HashBrown](https://github.com/PendingUpdates/HashBrown) | No cloud permissions. | Not used. | Not used. | Existing-evidence registration requires local file access. Direct acquisition is a separate workflow with its own platform prerequisites; don't grant acquisition privileges merely to work with existing evidence. |
-| [Pallette Clenser](https://github.com/PendingUpdates/Pallette-Clenser) | Not used. | Not used. | Not used. | Python standard library and supplied synthetic fixtures only; no administrator access, cloud credentials or live collection. |
+### [Flapjacks](https://github.com/PendingUpdates/Flapjacks)
+
+- **Microsoft 365:** Approved delegated Graph reads and, for applicable checks, matching Exchange/Purview sessions. Identity-only sign-in does not unlock the audit scopes.
+- **Google Workspace:** Not used.
+- **On-premises Active Directory:** Not used; Microsoft Entra is separate.
+- **Local or host access:** PowerShell and access to the checkout; write only if saving local results. [Authentication and setup](https://github.com/PendingUpdates/Flapjacks/blob/main/terminal/docs/AUTHENTICATION.md)
+
+### [BEC](https://github.com/PendingUpdates/BEC)
+
+- **Microsoft 365:** Admin-consented Graph **application** permissions for the chosen live collectors, with separate trace provisioning where applicable.
+- **Google Workspace:** Delegated service account and an authorized reports admin for Admin SDK audit reports; no Gmail mailbox access scope.
+- **On-premises Active Directory:** No native collector; no AD privileges required.
+- **Local or host access:** Read supplied exports and write the local case; no provider credentials for offline work. [Microsoft setup](https://github.com/PendingUpdates/BEC/blob/main/docs/security.md) · [Workspace setup](https://github.com/PendingUpdates/BEC/blob/main/docs/workspace.md)
+
+### [CrumbTrail](https://github.com/PendingUpdates/CrumbTrail)
+
+- **Microsoft 365:** No cloud permissions.
+- **Google Workspace:** Not used.
+- **On-premises Active Directory:** No directory bind or cloud API permissions.
+- **Local or host access:** Access to the input Windows artifacts and local output. Collecting protected source artifacts separately may require channel- or host-specific access.
+
+### [HashBrown](https://github.com/PendingUpdates/HashBrown)
+
+- **Microsoft 365:** No cloud permissions.
+- **Google Workspace:** Not used.
+- **On-premises Active Directory:** Not used.
+- **Local or host access:** Existing-evidence registration requires local file access. Direct acquisition is a separate workflow with its own platform prerequisites; don't grant acquisition privileges merely to work with existing evidence.
+
+### [Pallette Clenser](https://github.com/PendingUpdates/Pallette-Clenser)
+
+- **Microsoft 365:** Not used.
+- **Google Workspace:** Not used.
+- **On-premises Active Directory:** Not used.
+- **Local or host access:** Python standard library and supplied synthetic fixtures only; no administrator access, cloud credentials or live collection.
 
 Provision only the permissions for the mode you plan to use. Each tool's README and setup docs provide its exact scopes, roles, licensing and supported platforms. A source that could not be read is a coverage gap, not a passing security check.
 
