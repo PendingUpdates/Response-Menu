@@ -14,16 +14,16 @@ A menu of independent incident-response and security-posture tools. Choose the t
 
 | Tool | What it is for |
 | --- | --- |
-| [BEC](https://github.com/PendingUpdates/BEC) | Investigate email and account compromise with evidence-linked reporting. |
-| [Flapjacks](https://github.com/PendingUpdates/Flapjacks) | Review Microsoft 365 tenant configuration and security posture, with explicit coverage gaps. |
-| [CrumbTrail](https://github.com/PendingUpdates/CrumbTrail) | Build Windows event timelines and surface useful observations. |
-| [HashBrown](https://github.com/PendingUpdates/HashBrown) | Track evidence, integrity and custody; use its separate acquisition workflow when collection is needed. |
-| [Pallette Clenser](https://github.com/PendingUpdates/Pallette-Clenser) | Synthetic-only application-ownership audit planner; no host scanning, real-product detection or removal. |
+| [BEC](https://github.com/PendingUpdates/BEC) | Investigate email and account compromise using live Microsoft 365 or Google Workspace data, or analyze saved evidence offline. |
+| [Flapjacks](https://github.com/PendingUpdates/Flapjacks) | Review the security posture of a live Microsoft 365 tenant, or explore the audit with the synthetic demo. Reports identify coverage gaps. |
+| [CrumbTrail](https://github.com/PendingUpdates/CrumbTrail) | Build timelines from supplied Windows event logs and exports, or practice triage with the synthetic lab. |
+| [HashBrown](https://github.com/PendingUpdates/HashBrown) | Import existing disk or memory images and track their hashes and custody. A separate prototype registers supplied files. Native disk and RAM capture through Velociraptor still needs platform qualification. |
+| [Pallette Clenser](https://github.com/PendingUpdates/Pallette-Clenser) | Audit and plan potentially unwanted app cleanup. The current launcher accepts only supplied test inventories and cannot scan a host or remove apps. |
 
 ## Getting started
 
 1. Open the tool's repository and follow its README and setup instructions.
-2. Install only that tool's prerequisites. BEC, CrumbTrail and HashBrown use independent Python packages; Flapjacks uses PowerShell and does not require Python.
+2. Install only that tool's prerequisites. BEC, CrumbTrail and HashBrown use independent Python packages. Pallette Clenser uses Python 3.11 or newer and the standard library. Flapjacks uses PowerShell and does not require Python.
 3. Review the permissions for the mode you intend to use. Offline work with saved evidence does not require cloud credentials.
 4. Use the [workflow menu](docs/tool-workflows.md) for task-specific guidance and evidence handoffs.
 
