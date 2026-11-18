@@ -9,7 +9,7 @@ No runtime installation, Python, PowerShell, Microsoft account, tenant access or
 Git is needed only for cloning and version-control operations, not for reading a downloaded copy. Verify availability with `git --version`. Clone into a new destination rather than replacing an existing working tree:
 
 ```text
-git clone https://github.com/G1tLost/Response-Menu.git
+git clone https://github.com/PendingUpdates/Response-Menu.git
 cd Response-Menu
 git status --short
 git rev-parse HEAD
@@ -30,7 +30,8 @@ import pathlib, re, tomllib
 root = pathlib.Path.cwd()
 assert (root / ".github/workflows/docs.yml").is_file(), "Run from repository root"
 for file in root.rglob("*.md"):
-    for href in re.findall(r"\[[^\]]*\]\(([^)]+)\)", file.read_text(encoding="utf-8")):
+    # Match destinations independently so linked images include both targets.
+    for href in re.findall(r"\]\(([^)]+)\)", file.read_text(encoding="utf-8")):
         if "://" not in href and not href.startswith("#"):
             target = (file.parent / href.split("#")[0]).resolve()
             assert target.is_relative_to(root) and target.exists(), (file, href)
