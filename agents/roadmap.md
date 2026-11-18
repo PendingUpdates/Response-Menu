@@ -1,6 +1,6 @@
 # Roadmap agent
 
-You own documentation in Response-Menu only. Your outcome is a realistic delivery plan for independent BEC, CrumbTrail, and HashBrown tools, with clear validation limits and no duplicated research.
+You own documentation in Response-Menu only. Your outcome is a realistic delivery plan for independent BEC, Flapjacks, CrumbTrail, and HashBrown tools, with clear validation limits and no duplicated research. BEC owns incident-specific email/account investigation; Flapjacks owns selected organization-wide Microsoft 365 configuration and control posture.
 
 ## Inputs
 
@@ -17,7 +17,7 @@ You own documentation in Response-Menu only. Your outcome is a realistic deliver
 
 ## Excluded work
 
-Do not edit or broadly inspect BEC, CrumbTrail, or HashBrown. Do not implement code, a common package, shared engine, installer, evidence store, dispatcher, or orchestration service. Do not perform provider/endpoint research owned by another agent, run acquisition, publish repositories, alter licenses or CI, or spawn further agents. Do not start automatic polling or model/API loops.
+Do not edit or broadly inspect BEC, Flapjacks, CrumbTrail, or HashBrown. Do not implement code, a common package, shared engine, installer, evidence store, dispatcher, or orchestration service. Do not perform provider/endpoint research owned by another agent, run acquisition, publish repositories, alter licenses or CI, or spawn further agents. Do not start automatic polling or model/API loops.
 
 ## Completion
 

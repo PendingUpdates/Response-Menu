@@ -4,14 +4,15 @@
 
 Response-Menu is documentation-only planning for independent tools. Its owner is the roadmap agent. Maintain the README, roadmap, bounded agent briefs, and handoff documentation. Follow the current user/coordinator assignment; do not change other repositories.
 
-Do not add a toolkit executable, runtime package, shared engine, dispatcher, orchestration runtime, shared installer, submodules, or a mandatory common evidence store. Do not introduce a shared dependency required by BEC, CrumbTrail, or HashBrown. Optional file-based interchange is a proposal until separately justified and tested.
+Do not add a toolkit executable, runtime package, shared engine, dispatcher, orchestration runtime, shared installer, submodules, or a mandatory common evidence store. Do not introduce a shared dependency required by BEC, Flapjacks, CrumbTrail, or HashBrown. Optional file-based interchange is a proposal until separately justified and tested.
 
 The intended ownership is:
 
-- BEC agent: `G1tLost/BEC`, email/account compromise only.
-- Windows triage agent: `G1tLost/CrumbTrail`, Windows event triage only.
-- Acquisition agent: `G1tLost/HashBrown`, disk/RAM acquisition, integrity, and custody only.
-- Roadmap agent: `G1tLost/Response-Menu`, planning documents only.
+- BEC agent: `PendingUpdates/BEC`, email/account compromise only.
+- M365 audit agent: `PendingUpdates/Flapjacks`, selected organization-wide Microsoft 365 configuration and control posture only.
+- Windows triage agent: `PendingUpdates/CrumbTrail`, Windows event triage only.
+- Acquisition agent: `PendingUpdates/HashBrown`, disk/RAM acquisition, integrity, and custody only.
+- Roadmap agent: `PendingUpdates/Response-Menu`, planning documents only.
 
 Git operations, publication, licensing, and CI changes belong to the coordinator unless explicitly reassigned. Do not make production changes or run endpoint acquisition from a planning task.
 
