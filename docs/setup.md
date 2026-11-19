@@ -53,6 +53,7 @@ Install only the tool needed, following that tool's own setup instructions for t
 | BEC | Independent Python application for email/account incident evidence; optional provider dependencies and authentication are separate from offline use |
 | Flapjacks | Independent PowerShell application for Microsoft 365 tenant posture; Python is not its prerequisite; live Microsoft sessions/permissions are separate from synthetic or offline evaluation |
 | CrumbTrail | Independent Python application for Windows-event triage; optional EVTX parsing tools are required only for the documented parsing workflow |
+| GPO Grits | Python 3.9 or newer and the standard library. The offline auditor reads administrator-supplied on-premises Group Policy reports and writes local HTML and JSON. |
 | HashBrown | Independent Python application for evidence integrity/custody and separately scoped acquisition; offline existing-evidence work does not require live acquisition setup |
 
 No installation, provider sign-in, permission grant, endpoint capture or remediation is performed by these instructions. Local evidence/report writes must remain explicit and preserve original inputs; see the workflow boundary before running any tool.
