@@ -6,7 +6,7 @@
 
 ## The counter menu
 
-**What brought you in?** Pick a category, then open the tool that fits. All five tools work independently; Response Menu is their documentation menu. There is no shared installer or suite-wide permission grant.
+**What brought you in?** Pick a category, then open the tool that fits. The tools work independently; Response Menu is their documentation menu. There is no shared installer or suite-wide permission grant.
 
 <details open>
 <summary><strong>Investigate · 3 tools</strong> — work an incident or handle evidence</summary>
@@ -22,12 +22,13 @@
 ---
 
 <details open>
-<summary><strong>Audit &amp; plan · 2 tools</strong> — review posture or plan cleanup</summary>
+<summary><strong>Audit &amp; plan · 3 tools</strong> — review posture or plan cleanup</summary>
 
-<a href="https://github.com/PendingUpdates/Flapjacks"><img src="docs/assets/Flapjacks.png" alt="Pancakes; open Flapjacks" width="108" height="94"></a> <a href="https://github.com/PendingUpdates/Pallette-Clenser"><img src="docs/assets/Pallette-Clenser.png" alt="Fruit bowl; open Pallette Clenser" width="108"></a>
+<a href="https://github.com/PendingUpdates/Flapjacks"><img src="docs/assets/Flapjacks.png" alt="Pancakes; open Flapjacks" width="108" height="94"></a> <a href="https://github.com/PendingUpdates/Pallette-Clenser"><img src="docs/assets/Pallette-Clenser.png" alt="Fruit bowl; open Pallette Clenser" width="108"></a> <a href="https://github.com/PendingUpdates/GPO-Grits"><img src="docs/assets/GPO-Grits.png" alt="Grits bowl and spoon; open GPO Grits" width="108"></a>
 
 - **[Flapjacks](https://github.com/PendingUpdates/Flapjacks)** — Review the security posture of a live Microsoft 365 tenant, or explore the audit with the synthetic demo. Reports identify coverage gaps.
 - **[Pallette Clenser](https://github.com/PendingUpdates/Pallette-Clenser)** — Audit and plan potentially unwanted app cleanup. The current launcher accepts only supplied test inventories and cannot scan a host or remove apps.
+- **[GPO Grits](https://github.com/PendingUpdates/GPO-Grits)** — Audit on-premises Active Directory Group Policy from exported reports. Review declared settings, OU link precedence, and values observed for a specific target.
 
 </details>
 
@@ -40,7 +41,7 @@ Open the chosen tool’s README for setup and mode-specific permissions. Each to
 ## Getting started
 
 1. Open the tool's repository and follow its README and setup instructions.
-2. Install only that tool's prerequisites. BEC, CrumbTrail and HashBrown use independent Python packages. Pallette Clenser uses Python 3.11 or newer and the standard library. Flapjacks uses PowerShell and does not require Python.
+2. Install only that tool's prerequisites. BEC, CrumbTrail and HashBrown use independent Python packages. GPO Grits runs from an extracted folder with Python 3.9 or newer and the standard library. Pallette Clenser uses Python 3.11 or newer and the standard library. Flapjacks uses PowerShell and does not require Python.
 3. Review the permissions for the mode you intend to use. Offline work with saved evidence does not require cloud credentials.
 4. Use the [workflow menu](docs/tool-workflows.md) for task-specific guidance and evidence handoffs.
 
@@ -56,6 +57,10 @@ Reading Response Menu requires no Microsoft 365, Google Workspace, Active Direct
 - **Google Workspace:** Not used.
 - **On-premises Active Directory:** Not used; Microsoft Entra is separate.
 - **Local or host access:** PowerShell and access to the checkout; write only if saving local results. [Authentication and setup](https://github.com/PendingUpdates/Flapjacks/blob/main/terminal/docs/AUTHENTICATION.md)
+
+### [GPO Grits](https://github.com/PendingUpdates/GPO-Grits)
+
+The offline auditor needs read access to the exported Group Policy files and write access to a new local report folder. An administrator exports the evidence separately using Windows Group Policy tools. [On-premises Group Policy workflow](docs/tool-workflows.md#on-premises-group-policy-audit)
 
 ### [BEC](https://github.com/PendingUpdates/BEC)
 
