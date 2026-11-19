@@ -2,8 +2,6 @@
 
 <p align="center"><img src="docs/assets/Response-Menu-Banner.gif" alt="Pixel diner counter with breakfast dishes, monitor charts and animated coffee steam"></p>
 
-<p align="center"><a href="docs/assets/Response-Menu-Banner.png">Still banner</a></p>
-
 ## The counter menu
 
 **What brought you in?** Pick a category, then open the tool that fits. The tools work independently; Response Menu is their documentation menu. There is no shared installer or suite-wide permission grant.
