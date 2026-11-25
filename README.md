@@ -22,10 +22,10 @@
 <details open>
 <summary><strong>Audit &amp; plan · 3 tools</strong> — review posture or plan cleanup</summary>
 
-<a href="https://github.com/PendingUpdates/Flapjacks"><img src="docs/assets/Flapjacks.png" alt="Pancakes; open Flapjacks" width="108" height="94"></a> <a href="https://github.com/PendingUpdates/Pallette-Clenser"><img src="docs/assets/Pallette-Clenser.png" alt="Fruit bowl; open Pallette Clenser" width="108"></a> <a href="https://github.com/PendingUpdates/GPO-Grits"><img src="docs/assets/GPO-Grits.png" alt="Grits bowl and spoon; open GPO Grits" width="108"></a>
+<a href="https://github.com/PendingUpdates/Flapjacks"><img src="docs/assets/Flapjacks.png" alt="Pancakes; open Flapjacks" width="108" height="94"></a> <a href="https://github.com/PendingUpdates/Palate-Cleanser"><img src="docs/assets/Palate-Cleanser.png" alt="Fruit bowl; open Palate Cleanser" width="108"></a> <a href="https://github.com/PendingUpdates/GPO-Grits"><img src="docs/assets/GPO-Grits.png" alt="Grits bowl and spoon; open GPO Grits" width="108"></a>
 
 - **[Flapjacks](https://github.com/PendingUpdates/Flapjacks)** — Review the security posture of a live Microsoft 365 tenant, or explore the audit with the synthetic demo. Reports identify coverage gaps.
-- **[Pallette Clenser](https://github.com/PendingUpdates/Pallette-Clenser)** — Audit and plan potentially unwanted app cleanup. The current launcher accepts only supplied test inventories and cannot scan a host or remove apps.
+- **[Palate Cleanser](https://github.com/PendingUpdates/Palate-Cleanser)** — Audit and plan potentially unwanted app cleanup. The current launcher accepts only supplied test inventories and cannot scan a host or remove apps.
 - **[GPO Grits](https://github.com/PendingUpdates/GPO-Grits)** — Audit on-premises Active Directory Group Policy from exported reports. Review declared settings, OU link precedence, and values observed for a specific target.
 
 </details>
@@ -39,7 +39,7 @@ Open the chosen tool’s README for setup and mode-specific permissions. Each to
 ## Getting started
 
 1. Open the tool's repository and follow its README and setup instructions.
-2. Install only that tool's prerequisites. BEC, CrumbTrail and HashBrown use independent Python packages. GPO Grits runs from an extracted folder with Python 3.9 or newer and the standard library. Pallette Clenser uses Python 3.11 or newer and the standard library. Flapjacks uses PowerShell and does not require Python.
+2. Install only that tool's prerequisites. BEC, CrumbTrail and HashBrown use independent Python packages. GPO Grits runs from an extracted folder with Python 3.9 or newer and the standard library. Palate Cleanser uses Python 3.11 or newer and the standard library. Flapjacks uses PowerShell and does not require Python.
 3. Review the permissions for the mode you intend to use. Offline work with saved evidence does not require cloud credentials.
 4. Use the [workflow menu](docs/tool-workflows.md) for task-specific guidance and evidence handoffs.
 
@@ -81,7 +81,7 @@ The offline auditor needs read access to the exported Group Policy files and wri
 - **On-premises Active Directory:** Not used.
 - **Local or host access:** Existing-evidence registration requires local file access. Direct acquisition is a separate workflow with its own platform prerequisites; don't grant acquisition privileges merely to work with existing evidence.
 
-### [Pallette Clenser](https://github.com/PendingUpdates/Pallette-Clenser)
+### [Palate Cleanser](https://github.com/PendingUpdates/Palate-Cleanser)
 
 - **Microsoft 365:** Not used.
 - **Google Workspace:** Not used.
