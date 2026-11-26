@@ -12,7 +12,7 @@
 <a href="https://github.com/PendingUpdates/BEC"><img src="docs/assets/BEC.png" alt="Bacon, egg and cheese sandwich; open BEC" width="108" height="94"></a> <a href="https://github.com/PendingUpdates/CrumbTrail"><img src="docs/assets/CrumbTrail.png" alt="Toast; open CrumbTrail" width="108" height="94"></a> <a href="https://github.com/PendingUpdates/HashBrown"><img src="docs/assets/HashBrown.png" alt="Golden rectangular hash brown; open HashBrown" width="108"></a>
 
 - **[BEC](https://github.com/PendingUpdates/BEC)** — Investigate email and account compromise using live Microsoft 365 or Google Workspace data, or analyze saved evidence offline.
-- **[CrumbTrail](https://github.com/PendingUpdates/CrumbTrail)** — Build timelines from supplied Windows event logs and exports, or practice triage with the synthetic lab.
+- **[CrumbTrail](https://github.com/PendingUpdates/CrumbTrail)** — Build timelines from supplied Windows event logs and exports.
 - **[HashBrown](https://github.com/PendingUpdates/HashBrown)** — Import existing disk or memory images and track their hashes and custody. A separate prototype registers supplied files. Native disk and RAM capture through Velociraptor still needs platform qualification.
 
 </details>
@@ -24,8 +24,8 @@
 
 <a href="https://github.com/PendingUpdates/Flapjacks"><img src="docs/assets/Flapjacks.png" alt="Pancakes; open Flapjacks" width="108" height="94"></a> <a href="https://github.com/PendingUpdates/Palate-Cleanser"><img src="docs/assets/Palate-Cleanser.png" alt="Fruit bowl; open Palate Cleanser" width="108"></a> <a href="https://github.com/PendingUpdates/GPO-Grits"><img src="docs/assets/GPO-Grits.png" alt="Grits bowl and spoon; open GPO Grits" width="108"></a>
 
-- **[Flapjacks](https://github.com/PendingUpdates/Flapjacks)** — Review the security posture of a live Microsoft 365 tenant, or explore the audit with the synthetic demo. Reports identify coverage gaps.
-- **[Palate Cleanser](https://github.com/PendingUpdates/Palate-Cleanser)** — Audit and plan potentially unwanted app cleanup. The current launcher accepts only supplied test inventories and cannot scan a host or remove apps.
+- **[Flapjacks](https://github.com/PendingUpdates/Flapjacks)** — Review the security posture of an authorized Microsoft 365 tenant. Reports identify coverage gaps.
+- **[Palate Cleanser](https://github.com/PendingUpdates/Palate-Cleanser)** — In development. The current version does not audit endpoints or remove applications.
 - **[GPO Grits](https://github.com/PendingUpdates/GPO-Grits)** — Audit on-premises Active Directory Group Policy from exported reports. Review declared settings, OU link precedence, and values observed for a specific target.
 
 </details>
@@ -39,7 +39,7 @@ Open the chosen tool’s README for setup and mode-specific permissions. Each to
 ## Getting started
 
 1. Open the tool's repository and follow its README and setup instructions.
-2. Install only that tool's prerequisites. BEC, CrumbTrail and HashBrown use independent Python packages. GPO Grits runs from an extracted folder with Python 3.9 or newer and the standard library. Palate Cleanser uses Python 3.11 or newer and the standard library. Flapjacks uses PowerShell and does not require Python.
+2. Install only that tool's prerequisites. BEC, CrumbTrail and HashBrown use independent Python packages. GPO Grits runs from an extracted folder with Python 3.9 or newer and the standard library. Flapjacks uses PowerShell and does not require Python.
 3. Review the permissions for the mode you intend to use. Offline work with saved evidence does not require cloud credentials.
 4. Use the [workflow menu](docs/tool-workflows.md) for task-specific guidance and evidence handoffs.
 
@@ -86,7 +86,7 @@ The offline auditor needs read access to the exported Group Policy files and wri
 - **Microsoft 365:** Not used.
 - **Google Workspace:** Not used.
 - **On-premises Active Directory:** Not used.
-- **Local or host access:** Python standard library and supplied synthetic fixtures only; no administrator access, cloud credentials or live collection.
+- **Local or host access:** No supported endpoint collection or removal. Do not run the archived Windows remover.
 
 Provision only the permissions for the mode you plan to use. Each tool's README and setup docs provide its exact scopes, roles, licensing and supported platforms. A source that could not be read is a coverage gap, not a passing security check.
 
